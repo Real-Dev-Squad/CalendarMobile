@@ -22,7 +22,9 @@ function AuthButton({
   return (
     <Pressable style={[styles.btnWrapper, {backgroundColor: backgroundColor}]}>
       <Image source={imgSrc} style={styles.img} />
-      <Text style={{color: textColor}}>Continue with {btnText}</Text>
+      <Text style={[styles.btnText, {color: textColor}]}>
+        Continue with {btnText}
+      </Text>
     </Pressable>
   );
 }

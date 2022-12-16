@@ -10,11 +10,9 @@ function AuthScreen() {
       <View style={styles.heroSection}>
         <Image source={Images.logo} />
         <Text style={styles.heroTitle}>HapDay</Text>
-        {/* SubTitle */}
         <Text style={styles.heroSubtitle}>Makes your day happen</Text>
       </View>
 
-      {/* Group of buttons */}
       <AuthBtnGroup />
     </SafeAreaView>
   );

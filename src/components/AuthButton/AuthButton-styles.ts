@@ -4,8 +4,8 @@ export const styles = StyleSheet.create({
   btnWrapper: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '65%',
+    justifyContent: 'flex-start',
+    width: 300,
     paddingHorizontal: 20,
     paddingVertical: 15,
     margin: 10,
@@ -14,5 +14,8 @@ export const styles = StyleSheet.create({
   img: {
     width: 24,
     height: 'auto',
+  },
+  btnText: {
+    paddingHorizontal: '15%',
   },
 });
