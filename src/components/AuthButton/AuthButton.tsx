@@ -6,6 +6,7 @@ import {
   Pressable,
   Text,
 } from 'react-native';
+import {styles} from './AuthButton-styles';
 
 function AuthButton({
   imgSrc,
@@ -19,19 +20,8 @@ function AuthButton({
   textColor: ColorValue;
 }) {
   return (
-    <Pressable
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '65%',
-        paddingHorizontal: 20,
-        paddingVertical: 15,
-        margin: 10,
-        backgroundColor: backgroundColor,
-        borderRadius: 8,
-      }}>
-      <Image source={imgSrc} style={{width: 24, height: 'auto'}} />
+    <Pressable style={[styles.btnWrapper, {backgroundColor: backgroundColor}]}>
+      <Image source={imgSrc} style={styles.img} />
       <Text style={{color: textColor}}>Continue with {btnText}</Text>
     </Pressable>
   );

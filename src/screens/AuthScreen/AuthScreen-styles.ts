@@ -6,4 +6,23 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },
+  heroSection: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingVertical: 10,
+    // NOTE: gap will be available from RN 0.71.0
+    // gap: 2,
+  },
+  heroTitle: {
+    color: '#FECC7D',
+    fontWeight: '400',
+    fontSize: 40,
+    lineHeight: 48,
+    fontFamily: 'Modak-Regular',
+  },
+  heroSubtitle: {
+    fontWeight: '500',
+    fontSize: 20,
+    lineHeight: 30,
+  },
 });
