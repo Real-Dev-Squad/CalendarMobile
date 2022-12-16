@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
-import {Images} from '../../constants/images';
+import {Images} from '../../assets/images';
 import AuthButton from '../AuthButton/AuthButton';
 import {styles} from './AuthScreen-styles';
 
