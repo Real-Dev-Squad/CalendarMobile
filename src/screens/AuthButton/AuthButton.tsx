@@ -18,8 +18,6 @@ function AuthButton({
   backgroundColor: ColorValue;
   textColor: ColorValue;
 }) {
-  console.log({backgroundColor});
-
   return (
     <Pressable
       style={{
