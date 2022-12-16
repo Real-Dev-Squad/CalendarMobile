@@ -14,7 +14,6 @@ export const styles = StyleSheet.create({
     // gap: 2,
   },
   heroTitle: {
-    color: '#FECC7D',
     fontWeight: '400',
     fontSize: 40,
     lineHeight: 48,
