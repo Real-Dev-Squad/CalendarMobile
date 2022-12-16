@@ -22,6 +22,7 @@ function AuthScreen() {
             fontWeight: '400',
             fontSize: 40,
             lineHeight: 48,
+            fontFamily: 'Modak-Regular',
           }}>
           HapDay
         </Text>
