@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
   heroSection: {
     display: 'flex',
     alignItems: 'center',
-    paddingVertical: 10,
     // NOTE: gap will be available from RN 0.71.0
     // gap: 2,
   },
@@ -18,6 +17,7 @@ export const styles = StyleSheet.create({
     fontSize: 40,
     lineHeight: 48,
     fontFamily: 'Modak-Regular',
+    paddingTop: 20,
   },
   heroSubtitle: {
     fontWeight: '500',
