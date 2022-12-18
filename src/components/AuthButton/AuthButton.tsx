@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {
   ColorValue,
@@ -19,8 +20,11 @@ function AuthButton({
   backgroundColor: ColorValue;
   textColor: ColorValue;
 }) {
+  const navigation = useNavigation();
   return (
-    <Pressable style={[styles.btnWrapper, {backgroundColor: backgroundColor}]}>
+    <Pressable
+      style={[styles.btnWrapper, {backgroundColor: backgroundColor}]}
+      onPress={() => navigation.navigate('Login')}>
       <Image source={imgSrc} style={styles.img} />
       <Text style={[styles.btnText, {color: textColor}]}>
         Continue with {btnText}

@@ -21,7 +21,8 @@ export const styles = StyleSheet.create({
   },
   heroSubtitle: {
     fontWeight: '500',
-    fontSize: 20,
+    fontSize: 18,
     lineHeight: 30,
+    color: '#3D3D3D',
   },
 });
