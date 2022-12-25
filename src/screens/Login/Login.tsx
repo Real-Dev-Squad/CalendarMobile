@@ -5,24 +5,16 @@ import {RCalButton} from '../../components/Buttons/Buttons';
 import {PasswordInput, RCalTextInput} from '../../components/Inputs/Inputs';
 import {colors} from '../../constants/colors';
 import AuthLink from '../../components/AuthLink/AuthLink';
-import {styles} from './Login-styles';
+import {commonStyles} from '../../assets/commonStyles/styles';
 
 function Login() {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.heading}>HapDay</Text>
-      <RCalTextInput
-        inputValue={name}
-        errMessage="hello"
-        label="Name"
-        placeholder="John Mobbin"
-        onChangeHandler={setName}
-      />
+    <SafeAreaView style={commonStyles.emailAuthScreenContainer}>
+      <Text style={commonStyles.emailAuthScreenHeading}>HapDay</Text>
       <RCalTextInput
         inputValue={email}
         errMessage="hello"
