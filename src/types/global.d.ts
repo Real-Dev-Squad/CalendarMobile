@@ -8,6 +8,12 @@ declare global {
       SignUp: undefined;
       ForgotPassword: undefined;
       EmailVerification: {email: string};
+      ResetPassword: undefined;
     }
   }
 }
+
+export type EmailVerificationRouteProp = RouteProp<
+  RootStackParamList,
+  'EmaiLVerification'
+>;

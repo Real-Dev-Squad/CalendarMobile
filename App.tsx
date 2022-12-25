@@ -6,6 +6,7 @@ import Login from './src/screens/Login/Login';
 import SignUp from './src/screens/SignUp/SignUp';
 import ForgotPassword from './src/screens/ForgotPassword/ForgotPassword';
 import EmailVerification from './src/screens/EmailVerification/EmailVerification';
+import ResetPassword from './src/screens/ResetPassword/ResetPassword';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,6 +45,11 @@ const App = () => {
         <Stack.Screen
           name={'EmailVerification'}
           component={EmailVerification}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={'ResetPassword'}
+          component={ResetPassword}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

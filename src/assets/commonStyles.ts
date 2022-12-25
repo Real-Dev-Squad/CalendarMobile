@@ -14,4 +14,11 @@ export const commonStyles = StyleSheet.create({
     lineHeight: 48,
     fontSize: 40,
   },
+  screenInfoContainer: {display: 'flex', alignItems: 'center', padding: 30},
+  screenInfoHeading: {
+    color: colors.titleColor,
+    fontWeight: 'bold',
+    fontSize: 20,
+    lineHeight: 30,
+  },
 });

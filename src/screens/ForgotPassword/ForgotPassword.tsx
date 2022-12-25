@@ -6,7 +6,6 @@ import {commonStyles} from '../../assets/commonStyles';
 import {RCalButton} from '../../components/Buttons/Buttons';
 import {RCalTextInput} from '../../components/Inputs/Inputs';
 import {colors} from '../../constants/colors';
-import {styles} from './ForgotPassword-styles';
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -15,8 +14,8 @@ function ForgotPassword() {
   return (
     <SafeAreaView style={commonStyles.emailAuthScreenContainer}>
       <Text style={commonStyles.emailAuthScreenHeading}>HapDay</Text>
-      <View style={styles.screenInfoContainer}>
-        <Text style={styles.screenInfoHeading}>Forgot Password?</Text>
+      <View style={commonStyles.screenInfoContainer}>
+        <Text style={commonStyles.screenInfoHeading}>Forgot Password?</Text>
         <Text style={{color: colors.subtitleTextColor}}>
           No worries, we'll send you a verfication code
         </Text>

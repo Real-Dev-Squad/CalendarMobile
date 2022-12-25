@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   forgotPasswordText: {
-    color: colors.forgotPasswordTextColor,
+    color: colors.inputPromptColor,
     textDecorationLine: 'underline',
   },
 });
