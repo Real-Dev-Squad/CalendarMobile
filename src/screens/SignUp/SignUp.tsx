@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {Text} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {commonStyles} from '../../assets/commonStyles/styles';
+import {commonStyles} from '../../assets/commonStyles';
 import AuthLink from '../../components/AuthLink/AuthLink';
 import {RCalButton} from '../../components/Buttons/Buttons';
 import {PasswordInput, RCalTextInput} from '../../components/Inputs/Inputs';
@@ -36,6 +36,7 @@ function SignUp() {
         errMessage="hello"
         placeholder="Give a strong password"
         onChangeHandler={setPassword}
+        isForgotPasswordNeeded={true}
       />
       <RCalButton
         backgroundColor={colors.secondaryColor}

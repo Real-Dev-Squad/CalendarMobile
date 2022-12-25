@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   label: {
@@ -26,5 +27,14 @@ export const styles = StyleSheet.create({
     color: 'black',
     paddingHorizontal: 5,
     width: 325,
+  },
+  passwordPromptsContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  forgotPasswordText: {
+    color: colors.forgotPasswordTextColor,
+    textDecorationLine: 'underline',
   },
 });

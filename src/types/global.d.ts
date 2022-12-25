@@ -6,6 +6,8 @@ declare global {
       AuthScreen: undefined;
       Login: undefined;
       SignUp: undefined;
+      ForgotPassword: undefined;
+      EmailVerification: {email: string};
     }
   }
 }
