@@ -10,7 +10,7 @@ function AuthScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.heroSection}>
         <Image source={Images.logo} />
-        <Text style={[styles.heroTitle, {color: colors.brandColor}]}>
+        <Text style={[styles.heroTitle, {color: colors.primaryColor}]}>
           HapDay
         </Text>
         <Text style={styles.heroSubtitle}>Makes your day happen</Text>

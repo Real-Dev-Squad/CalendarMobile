@@ -3,6 +3,7 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AuthScreen from './src/screens/AuthScreen/AuthScreen';
 import Login from './src/screens/Login/Login';
+import SignUp from './src/screens/SignUp/SignUp';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,13 +20,18 @@ const App = () => {
     <NavigationContainer theme={RCalTheme}>
       <Stack.Navigator>
         <Stack.Screen
-          name="Auth"
+          name={'Auth'}
           component={AuthScreen}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="Login"
+          name={'Login'}
           component={Login}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={'SignUp'}
+          component={SignUp}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

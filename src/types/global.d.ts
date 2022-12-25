@@ -5,6 +5,7 @@ declare global {
     interface RootParamList extends RootStackParamList {
       AuthScreen: undefined;
       Login: undefined;
+      SignUp: undefined;
     }
   }
 }
