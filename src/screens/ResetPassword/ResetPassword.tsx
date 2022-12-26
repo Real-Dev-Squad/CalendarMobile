@@ -13,7 +13,7 @@ function ResetPassword() {
       <Text style={commonStyles.emailAuthScreenHeading}>HapDay</Text>
 
       <View style={commonStyles.screenInfoContainer}>
-        <Text style={commonStyles.screenInfoHeading}>Forgot Password?</Text>
+        <Text style={commonStyles.screenInfoHeading}>Reset Password</Text>
       </View>
 
       <PasswordInput
