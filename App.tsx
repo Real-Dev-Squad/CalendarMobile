@@ -9,6 +9,7 @@ import EmailVerification from './src/screens/EmailVerification/EmailVerification
 import ResetPassword from './src/screens/ResetPassword/ResetPassword';
 import Home from './src/screens/Home/Home';
 import NotFound from './src/screens/NotFound/NotFound';
+import Welcome from './src/screens/Onboarding/Welcome/Welcome';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,55 +33,55 @@ const App = () => {
         Login: 'login',
         SignUp: 'sign-up',
         ForgotPassword: 'forgot-password',
+        Welcome: 'welcome',
         NotFound: '*',
       },
     },
   };
 
+  const screenOptions = {headerShown: false};
+
   return (
     <NavigationContainer theme={RCalTheme} linking={linking}>
       <Stack.Navigator>
         <Stack.Screen
-          name={'Auth'}
+          name="Auth"
           component={AuthScreen}
-          options={{headerShown: false}}
+          options={screenOptions}
         />
+        <Stack.Screen name="Login" component={Login} options={screenOptions} />
         <Stack.Screen
-          name={'Login'}
-          component={Login}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name={'SignUp'}
+          name="SignUp"
           component={SignUp}
-          options={{headerShown: false}}
+          options={screenOptions}
         />
         <Stack.Screen
-          name={'ForgotPassword'}
+          name="ForgotPassword"
           component={ForgotPassword}
-          options={{headerShown: false}}
+          options={screenOptions}
         />
         <Stack.Screen
-          name={'EmailVerification'}
+          name="EmailVerification"
           component={EmailVerification}
-          options={{headerShown: false}}
+          options={screenOptions}
         />
         <Stack.Screen
-          name={'ResetPassword'}
+          name="ResetPassword"
           component={ResetPassword}
-          options={{headerShown: false}}
+          options={screenOptions}
         />
+        <Stack.Screen name="Home" component={Home} options={screenOptions} />
         <Stack.Screen
-          name={'Home'}
-          component={Home}
-          options={{headerShown: false}}
+          name="Welcome"
+          component={Welcome}
+          options={screenOptions}
         />
 
         {/* NOTE: Not Found screen must be placed at the bottom */}
         <Stack.Screen
           name={'NotFound'}
           component={NotFound}
-          options={{headerShown: false}}
+          options={screenOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>

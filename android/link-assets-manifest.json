@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "src/assets/fonts/Inter.ttf",
+      "sha1": "44b415f3b0ac1da7f3044ba6bcc542a649d4a447"
+    },
+    {
       "path": "src/assets/fonts/Modak-Regular.ttf",
       "sha1": "46b8d9e4dedd90b6d81199c676a371996c662ee3"
     }
