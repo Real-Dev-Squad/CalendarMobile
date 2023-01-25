@@ -41,11 +41,6 @@ const App = () => {
     <NavigationContainer theme={RCalTheme} linking={linking}>
       <Stack.Navigator>
         <Stack.Screen
-          name={'Home'}
-          component={Home}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
           name={'Auth'}
           component={AuthScreen}
           options={{headerShown: false}}
