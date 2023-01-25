@@ -7,6 +7,8 @@ import SignUp from './src/screens/SignUp/SignUp';
 import ForgotPassword from './src/screens/ForgotPassword/ForgotPassword';
 import EmailVerification from './src/screens/EmailVerification/EmailVerification';
 import ResetPassword from './src/screens/ResetPassword/ResetPassword';
+import Home from './src/screens/Home/Home';
+import NotFound from './src/screens/NotFound/NotFound';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,10 +20,31 @@ const RCalTheme = {
   },
 };
 
+// TODO: deep linking with authentication flow
+
 const App = () => {
+  const linking = {
+    prefixes: ['https://website-calendar-two.vercel.app', 'calendarmobile://'],
+    config: {
+      screens: {
+        Home: 'home',
+        Auth: 'auth',
+        Login: 'login',
+        SignUp: 'sign-up',
+        ForgotPassword: 'forgot-password',
+        NotFound: '*',
+      },
+    },
+  };
+
   return (
-    <NavigationContainer theme={RCalTheme}>
+    <NavigationContainer theme={RCalTheme} linking={linking}>
       <Stack.Navigator>
+        <Stack.Screen
+          name={'Home'}
+          component={Home}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name={'Auth'}
           component={AuthScreen}
@@ -50,6 +73,18 @@ const App = () => {
         <Stack.Screen
           name={'ResetPassword'}
           component={ResetPassword}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={'Home'}
+          component={Home}
+          options={{headerShown: false}}
+        />
+
+        {/* NOTE: Not Found screen must be placed at the bottom */}
+        <Stack.Screen
+          name={'NotFound'}
+          component={NotFound}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

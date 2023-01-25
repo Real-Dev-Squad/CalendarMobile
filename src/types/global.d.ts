@@ -9,6 +9,7 @@ declare global {
       ForgotPassword: undefined;
       EmailVerification: {email: string};
       ResetPassword: undefined;
+      Home: undefined;
     }
   }
 }
