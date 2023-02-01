@@ -10,6 +10,7 @@ declare global {
       EmailVerification: {email: string};
       ResetPassword: undefined;
       Home: undefined;
+      Welcome: undefined;
     }
   }
 }

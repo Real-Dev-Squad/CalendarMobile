@@ -1,10 +1,10 @@
 // import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {View} from 'react-native';
-import {Images} from '../../assets/images';
-import {ImgButton} from '../Buttons/Buttons';
+import {Images} from '../../../assets/images';
+import {ImgButton} from '../../Buttons/Buttons';
 import {InAppBrowser} from 'react-native-inappbrowser-reborn';
-import {colors} from '../../constants/colors';
+import {colors} from '../../../constants/colors';
 
 function AuthBtnGroup() {
   const continueWith = 'Continue with';

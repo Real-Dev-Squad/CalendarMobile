@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   headingContainer: {
     alignItems: 'center',
     width: 311,
+    rowGap: 20,
   },
   heading: {
     fontSize: 24,

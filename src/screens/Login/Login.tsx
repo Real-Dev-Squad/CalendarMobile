@@ -4,7 +4,7 @@ import {SafeAreaView, Text} from 'react-native';
 import {RCalButton} from '../../components/Buttons/Buttons';
 import {PasswordInput, RCalTextInput} from '../../components/Inputs/Inputs';
 import {colors} from '../../constants/colors';
-import AuthLink from '../../components/AuthLink/AuthLink';
+import AuthLink from '../../components/Auth/AuthLink/AuthLink';
 import {commonStyles} from '../../assets/commonStyles';
 
 function Login() {

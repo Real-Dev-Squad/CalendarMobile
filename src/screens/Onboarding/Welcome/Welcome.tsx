@@ -2,7 +2,7 @@ import {Text, View} from 'react-native';
 import React from 'react';
 import {styles} from './Welcome.styles';
 
-const Welcome = () => {
+function Welcome() {
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>
@@ -14,6 +14,6 @@ const Welcome = () => {
       </View>
     </View>
   );
-};
+}
 
 export default Welcome;
