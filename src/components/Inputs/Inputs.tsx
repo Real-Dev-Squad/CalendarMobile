@@ -101,3 +101,64 @@ export function PasswordInput({
     </View>
   );
 }
+
+export function PrefixTextInput({
+  prefix,
+  label,
+  inputValue,
+  placeholder,
+  onChangeHandler,
+  errMessage,
+}: {
+  prefix: string;
+  label: string;
+  inputValue: string;
+  placeholder?: string;
+  onChangeHandler: (input: string) => void;
+  errMessage: string;
+}) {
+  const prefixTextInputRef = useRef<TextInput>(null);
+  return (
+    <View>
+      <Text style={styles.label}>{label}</Text>
+      <View style={styles.prefixInputView}>
+        <View
+          style={{
+            ...{
+              borderWidth: 1,
+              borderRightWidth: 0,
+              borderTopLeftRadius: 10,
+              borderBottomLeftRadius: 10,
+              justifyContent: 'center',
+              padding: 10,
+            },
+            borderColor: prefixTextInputRef.current?.isFocused()
+              ? colors.primaryColor
+              : colors.inputBorderColor,
+          }}>
+          <Text style={styles.prefixText}>{prefix}</Text>
+        </View>
+        <TextInput
+          ref={prefixTextInputRef}
+          style={{
+            ...{
+              borderWidth: 1,
+              borderTopRightRadius: 10,
+              borderBottomRightRadius: 10,
+              color: 'black',
+              padding: 10,
+            },
+            borderColor: prefixTextInputRef.current?.isFocused()
+              ? colors.primaryColor
+              : colors.inputBorderColor,
+          }}
+          value={inputValue}
+          placeholder={placeholder}
+          onChangeText={onChangeHandler}
+          placeholderTextColor={colors.placeHolderTxtColor}
+        />
+      </View>
+      <Text>{errMessage}</Text>
+    </View>
+  );
+}

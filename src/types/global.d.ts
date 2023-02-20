@@ -1,3 +1,6 @@
+import {NavigationProp} from '@react-navigation/native';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+
 export {};
 
 declare global {
@@ -10,7 +13,8 @@ declare global {
       EmailVerification: {email: string};
       ResetPassword: undefined;
       Home: undefined;
-      Welcome: undefined;
+      UserDetails: NavigationProp;
+      ConnectCalendar: NavigationProp;
     }
   }
 }
@@ -18,4 +22,14 @@ declare global {
 export type EmailVerificationRouteProp = RouteProp<
   RootStackParamList,
   'EmaiLVerification'
+>;
+
+export type UserDetailsProps = NativeStackScreenProps<
+  RootStackParamList,
+  'UserDetails'
+>;
+
+export type ConnectCalendarProps = NativeStackScreenProps<
+  RootStackParamList,
+  'UserDetails'
 >;

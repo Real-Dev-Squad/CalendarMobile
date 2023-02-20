@@ -9,7 +9,8 @@ import EmailVerification from './src/screens/EmailVerification/EmailVerification
 import ResetPassword from './src/screens/ResetPassword/ResetPassword';
 import Home from './src/screens/Home/Home';
 import NotFound from './src/screens/NotFound/NotFound';
-import Welcome from './src/screens/Onboarding/Welcome/Welcome';
+import UserDetails from './src/screens/Onboarding/UserDetails/UserDetails';
+import ConnectCalendar from './src/screens/Onboarding/ConnectCalendar/ConnectCalendar';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +34,7 @@ const App = () => {
         Login: 'login',
         SignUp: 'sign-up',
         ForgotPassword: 'forgot-password',
-        Welcome: 'welcome',
+        UserDetails: 'user-details',
         NotFound: '*',
       },
     },
@@ -72,11 +73,15 @@ const App = () => {
         />
         <Stack.Screen name="Home" component={Home} options={screenOptions} />
         <Stack.Screen
-          name="Welcome"
-          component={Welcome}
+          name="UserDetails"
+          component={UserDetails}
           options={screenOptions}
         />
-
+        <Stack.Screen
+          name="ConnectCalendar"
+          component={ConnectCalendar}
+          options={screenOptions}
+        />
         {/* NOTE: Not Found screen must be placed at the bottom */}
         <Stack.Screen
           name={'NotFound'}

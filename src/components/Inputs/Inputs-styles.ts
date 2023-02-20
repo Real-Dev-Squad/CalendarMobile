@@ -37,4 +37,6 @@ export const styles = StyleSheet.create({
     color: colors.inputPromptColor,
     textDecorationLine: 'underline',
   },
+  prefixInputView: {flexDirection: 'row'},
+  prefixText: {fontSize: 14, color: colors.inputPromptColor},
 });
