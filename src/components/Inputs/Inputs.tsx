@@ -22,20 +22,22 @@ export function RCalTextInput({
 
   return (
     <View>
-      <Text style={styles.label}>{label}</Text>
-      <TextInput
-        ref={rCalTextInputRef}
-        style={{
-          ...styles.textInput,
-          borderColor: rCalTextInputRef.current?.isFocused()
-            ? colors.primaryColor
-            : colors.inputBorderColor,
-        }}
-        value={inputValue}
-        placeholder={placeholder}
-        onChangeText={onChangeHandler}
-        placeholderTextColor={colors.placeHolderTxtColor}
-      />
+      <View style={styles.labelAndTextInputContainer}>
+        <Text style={styles.label}>{label}</Text>
+        <TextInput
+          ref={rCalTextInputRef}
+          style={{
+            ...styles.textInput,
+            borderColor: rCalTextInputRef.current?.isFocused()
+              ? colors.primaryColor
+              : colors.inputBorderColor,
+          }}
+          value={inputValue}
+          placeholder={placeholder}
+          onChangeText={onChangeHandler}
+          placeholderTextColor={colors.placeHolderTxtColor}
+        />
+      </View>
       <Text>{errMessage}</Text>
     </View>
   );
@@ -120,43 +122,32 @@ export function PrefixTextInput({
   const prefixTextInputRef = useRef<TextInput>(null);
   return (
     <View>
-      <Text style={styles.label}>{label}</Text>
-      <View style={styles.prefixInputView}>
-        <View
-          style={{
-            ...{
-              borderWidth: 1,
-              borderRightWidth: 0,
-              borderTopLeftRadius: 10,
-              borderBottomLeftRadius: 10,
-              justifyContent: 'center',
-              padding: 10,
-            },
-            borderColor: prefixTextInputRef.current?.isFocused()
-              ? colors.primaryColor
-              : colors.inputBorderColor,
-          }}>
-          <Text style={styles.prefixText}>{prefix}</Text>
+      <View style={styles.labelAndTextInputContainer}>
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.prefixInputView}>
+          <Text
+            style={{
+              ...styles.prefixText,
+              borderColor: prefixTextInputRef.current?.isFocused()
+                ? colors.primaryColor
+                : colors.inputBorderColor,
+            }}>
+            {prefix}
+          </Text>
+          <TextInput
+            ref={prefixTextInputRef}
+            style={{
+              ...styles.prefixTextInput,
+              borderColor: prefixTextInputRef.current?.isFocused()
+                ? colors.primaryColor
+                : colors.inputBorderColor,
+            }}
+            value={inputValue}
+            placeholder={placeholder}
+            onChangeText={onChangeHandler}
+            placeholderTextColor={colors.placeHolderTxtColor}
+          />
         </View>
-        <TextInput
-          ref={prefixTextInputRef}
-          style={{
-            ...{
-              borderWidth: 1,
-              borderTopRightRadius: 10,
-              borderBottomRightRadius: 10,
-              color: 'black',
-              padding: 10,
-            },
-            borderColor: prefixTextInputRef.current?.isFocused()
-              ? colors.primaryColor
-              : colors.inputBorderColor,
-          }}
-          value={inputValue}
-          placeholder={placeholder}
-          onChangeText={onChangeHandler}
-          placeholderTextColor={colors.placeHolderTxtColor}
-        />
       </View>
       <Text>{errMessage}</Text>
     </View>

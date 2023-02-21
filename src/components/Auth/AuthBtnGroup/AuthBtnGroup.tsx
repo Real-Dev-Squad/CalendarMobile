@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Images} from '../../../assets/images';
 import {ImgButton} from '../../Buttons/Buttons';
 import {InAppBrowser} from 'react-native-inappbrowser-reborn';
@@ -9,7 +9,7 @@ function AuthBtnGroup() {
   const continueWith = 'Continue with';
 
   return (
-    <View>
+    <View style={styles.btnGroupContainer}>
       <ImgButton
         imgSrc={Images.googleLogo}
         btnText={`${continueWith} Google`}
@@ -79,5 +79,7 @@ function AuthBtnGroup() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({btnGroupContainer: {gap: 15}});
 
 export default AuthBtnGroup;

@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     width: 325,
   },
+  labelAndTextInputContainer: {gap: 10},
   passwordInput: {
     color: 'black',
   },
@@ -37,6 +38,22 @@ export const styles = StyleSheet.create({
     color: colors.inputPromptColor,
     textDecorationLine: 'underline',
   },
-  prefixInputView: {flexDirection: 'row'},
-  prefixText: {fontSize: 14, color: colors.inputPromptColor},
+  prefixInputView: {flexDirection: 'row', alignItems: 'center'},
+  prefixText: {
+    fontSize: 14,
+    color: colors.inputPromptColor,
+    borderWidth: 1,
+    borderRightWidth: 0,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+    justifyContent: 'center',
+    padding: 13.2,
+  },
+  prefixTextInput: {
+    borderWidth: 1,
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
+    color: 'black',
+    padding: 10,
+  },
 });

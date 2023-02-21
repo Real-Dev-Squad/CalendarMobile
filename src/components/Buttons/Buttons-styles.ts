@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
     width: 325,
     paddingHorizontal: 30,
     paddingVertical: 15,
-    margin: 10,
     borderRadius: 8,
   },
   img: {
