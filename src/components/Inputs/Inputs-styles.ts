@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     color: 'black',
     padding: 10,
-    width: 325,
+    width: '100%',
   },
   labelAndTextInputContainer: {gap: 10},
   passwordInput: {
@@ -48,6 +48,7 @@ export const styles = StyleSheet.create({
     borderBottomLeftRadius: 10,
     justifyContent: 'center',
     padding: 13.2,
+    width: '30%',
   },
   prefixTextInput: {
     borderWidth: 1,
@@ -55,5 +56,6 @@ export const styles = StyleSheet.create({
     borderBottomRightRadius: 10,
     color: 'black',
     padding: 10,
+    width: '70%',
   },
 });

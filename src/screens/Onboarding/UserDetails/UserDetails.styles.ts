@@ -2,10 +2,10 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    paddingTop: 40,
+    padding: 40,
     flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    justifyContent: 'space-between',
     fontFamily: 'Inter',
   },
+  userDetailsInputContainer: {marginTop: 30, width: '100%'},
 });

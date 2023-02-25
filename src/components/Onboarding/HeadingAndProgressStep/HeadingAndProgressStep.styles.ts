@@ -4,7 +4,6 @@ import {colors} from '../../../constants/colors';
 export const styles = StyleSheet.create({
   headingContainer: {
     alignItems: 'center',
-    width: 311,
     rowGap: 20,
   },
   heading: {
@@ -13,14 +12,16 @@ export const styles = StyleSheet.create({
     color: 'black',
   },
   subHeading: {
+    paddingHorizontal: 15,
     color: 'black',
     textAlign: 'center',
   },
-  stepContainer: {paddingHorizontal: 40},
+  stepContainer: {paddingTop: 30, width: '100%'},
   progressContainer: {rowGap: 5},
   progressSteplineContainer: {flexDirection: 'row', columnGap: 15},
   progressStepline: {
     borderColor: colors.secondaryColor,
+    backgroundColor: colors.secondaryColor,
     borderWidth: 5,
     borderRadius: 10,
     height: 0,
