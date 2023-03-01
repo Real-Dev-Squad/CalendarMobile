@@ -4,9 +4,11 @@ import {Images} from '../../../assets/images';
 import {ImgButton} from '../../Buttons/Buttons';
 import {InAppBrowser} from 'react-native-inappbrowser-reborn';
 import {colors} from '../../../constants/colors';
+import {useNavigation} from '@react-navigation/native';
 
 function AuthBtnGroup() {
   const continueWith = 'Continue with';
+  const navigation = useNavigation();
 
   return (
     <View style={styles.btnGroupContainer}>
@@ -76,6 +78,15 @@ function AuthBtnGroup() {
         textColor="#3D3D3D"
         onPress={() => navigation.navigate('Login')}
       /> */}
+      <ImgButton
+        imgSrc={Images.msftLogo}
+        btnText={`${continueWith} Onboarding`}
+        backgroundColor="#357EC7"
+        textColor="#F2F2F2"
+        onPress={() => {
+          navigation.navigate('UserDetails');
+        }}
+      />
     </View>
   );
 }

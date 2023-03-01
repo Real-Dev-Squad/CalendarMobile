@@ -20,4 +20,5 @@ export const styles = StyleSheet.create({
     width: '100%',
     borderColor: colors.inputBorderColor,
   },
+  listItemContainer: {marginVertical: 12},
 });

@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useState} from 'react';
+import React, {memo, useMemo, useRef, useState} from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {getTimeZones} from '@vvo/tzdb';
 import {Text, View} from 'react-native';
@@ -6,6 +6,7 @@ import {getCities, getUtcOffset} from '../../../utils/timezonePicker.utils';
 import {styles} from './TimezonePicker.styles';
 
 function TimezonePicker() {
+  const [isOpen, setIsOpen] = useState(false);
   const initialValueIndex = useRef(0);
   const timeZonesWithUtc = useMemo(
     () =>
@@ -23,9 +24,8 @@ function TimezonePicker() {
     [],
   );
 
-  const [isOpen, setIsOpen] = useState(false);
   const [currentTzValue, setCurrentTzValue] = useState(
-    timeZonesWithUtc[initialValueIndex.current],
+    timeZonesWithUtc[initialValueIndex.current].value,
   );
 
   return (
@@ -41,9 +41,11 @@ function TimezonePicker() {
         listMode="MODAL"
         style={styles.dropdown}
         containerStyle={styles.dropdownContainer}
+        itemSeparator={true}
+        listItemContainerStyle={styles.listItemContainer}
       />
     </View>
   );
 }
 
-export default TimezonePicker;
+export default memo(TimezonePicker);
