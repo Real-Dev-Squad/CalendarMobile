@@ -52,30 +52,27 @@ function TimezonePicker() {
   return (
     <View style={styles.pickerContainer}>
       <Text style={styles.label}>Timezone:</Text>
-      {loading ? (
-        <ActivityIndicator color={colors.secondaryColor} size={'small'} />
-      ) : (
-        <DropDownPicker
-          open={isOpen}
-          setOpen={setIsOpen}
-          value={currentTzValue}
-          setValue={setCurrentTzValue}
-          items={tzItems}
-          loading={loading}
-          searchable={true}
-          listMode="MODAL"
-          style={styles.dropdown}
-          containerStyle={styles.dropdownContainer}
-          itemSeparator={true}
-          itemSeparatorStyle={{
-            backgroundColor: colors.inputBorderColor,
-          }}
-          listItemContainerStyle={styles.listItemContainer}
-          ActivityIndicatorComponent={TzActivityIndication}
-          activityIndicatorColor={colors.secondaryColor}
-          activityIndicatorSize={30}
-        />
-      )}
+
+      <DropDownPicker
+        open={isOpen}
+        setOpen={setIsOpen}
+        value={currentTzValue}
+        setValue={setCurrentTzValue}
+        items={tzItems}
+        loading={loading}
+        searchable={true}
+        listMode="MODAL"
+        style={styles.dropdown}
+        containerStyle={styles.dropdownContainer}
+        itemSeparator={true}
+        itemSeparatorStyle={{
+          backgroundColor: colors.inputBorderColor,
+        }}
+        listItemContainerStyle={styles.listItemContainer}
+        ActivityIndicatorComponent={TzActivityIndication}
+        activityIndicatorColor={colors.secondaryColor}
+        activityIndicatorSize={30}
+      />
     </View>
   );
 }
