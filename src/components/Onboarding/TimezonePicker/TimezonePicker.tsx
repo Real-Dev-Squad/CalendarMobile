@@ -44,10 +44,7 @@ function TimezonePicker() {
     }
   }, [initialValueIndex, tzItems]);
 
-  const loading = useMemo(
-    () => isFetching || isLoading,
-    [isFetching, isLoading],
-  );
+  const loading = isFetching || isLoading;
 
   return (
     <View style={styles.pickerContainer}>
