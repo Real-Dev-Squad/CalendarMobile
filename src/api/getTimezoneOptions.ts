@@ -5,7 +5,7 @@ export default async function getTimezoneOptions(
   userTz: string,
 ): GetTimezoneOptionsResult {
   const {data} = await axios.get(
-    `${API_ENDPOINT}/get-tz-options?userTz=${userTz}`,
+    `${API_ENDPOINT}/api/v1/timezone?userTz=${userTz}`,
   );
   return data;
 }

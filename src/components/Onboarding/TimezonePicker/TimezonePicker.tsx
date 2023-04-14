@@ -18,7 +18,7 @@ function TimezonePicker() {
     queryFn: () => getTimezoneOptions(userTz),
     placeholderData: {
       success: false,
-      data: {tzOptions: [], initialValueIndex: 0},
+      data: {timeZones: [], userTimeZoneIndex: 0},
     },
     staleTime: Infinity,
   });
@@ -30,19 +30,19 @@ function TimezonePicker() {
     [],
   );
 
-  const {tzItems, initialValueIndex} = useMemo(
+  const {tzItems, userTimeZoneIndex} = useMemo(
     () => ({
-      tzItems: data?.data?.tzOptions || [],
-      initialValueIndex: data?.data?.initialValueIndex || 0,
+      tzItems: data?.data?.timeZones || [],
+      userTimeZoneIndex: data?.data?.userTimeZoneIndex || 0,
     }),
-    [data?.data?.initialValueIndex, data?.data?.tzOptions],
+    [data?.data?.userTimeZoneIndex, data?.data?.timeZones],
   );
 
   useEffect(() => {
     if (tzItems.length > 0) {
-      setCurrentTzValue(tzItems[initialValueIndex].value);
+      setCurrentTzValue(tzItems[userTimeZoneIndex].value);
     }
-  }, [initialValueIndex, tzItems]);
+  }, [userTimeZoneIndex, tzItems]);
 
   const loading = isFetching || isLoading;
 

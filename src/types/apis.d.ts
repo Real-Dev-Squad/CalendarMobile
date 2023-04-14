@@ -1,7 +1,7 @@
 type GetTimezoneOptionsResult = Promise<{
   success: boolean;
   data: {
-    tzOptions: {label: string; value: string}[];
-    initialValueIndex: number;
+    timeZones: {label: string; value: string}[];
+    userTimeZoneIndex: number;
   } | null;
 }>;
