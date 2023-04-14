@@ -1,7 +1,7 @@
 import {
   UserDetailsAction,
   UserDetailsState,
-} from '../types/screens/UserDetails.types';
+} from '../types/screens/UserDetails';
 
 export default function userDetailsReducer(
   state: UserDetailsState,

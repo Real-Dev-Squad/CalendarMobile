@@ -9,32 +9,17 @@ import {RCalButton} from '../../../components/Buttons/Buttons';
 import {colors} from '../../../constants/colors';
 import userDetailsReducer from '../../../reducers/userDetailsReducer';
 import {
-  // TimezonePickerAction,
-  // TimezonePickerState,
   UserDetailsAction,
   UserDetailsState,
-} from '../../../types/screens/UserDetails.types';
+} from '../../../types/screens/UserDetails';
 import {styles} from './UserDetails.styles';
 import {UserDetailsProps} from '../../../types/global';
-// import timezoneReducer from '../../../reducers/timezoneReducer';
+import TimezonePicker from '../../../components/Onboarding/TimezonePicker/TimezonePicker';
 
 function UserDetails(userDetailsProps: UserDetailsProps) {
   const [{username, fullname}, userDetailsDispatch] = useReducer<
     Reducer<UserDetailsState, UserDetailsAction>
   >(userDetailsReducer, {username: '', fullname: ''});
-
-  // const [{isOpen, currentValue}, timezonePickerDispatch] = useReducer<
-  //   Reducer<TimezonePickerState, TimezonePickerAction>
-  // >(timezoneReducer, {
-  //   isOpen: false,
-  //   currentValue: '',
-  // });
-
-  // const options = [{label: '', items: ''}];
-
-  // const setIsOpen = () => timezonePickerDispatch({type: 'isOpen'});
-
-  // const setCurrentValue = () => {};
 
   const setUsername = (text: string) =>
     userDetailsDispatch({type: 'username', payload: text});
@@ -63,6 +48,7 @@ function UserDetails(userDetailsProps: UserDetailsProps) {
             onChangeHandler={setFullname}
             errMessage="enter a valid fullname"
           />
+          <TimezonePicker />
         </View>
       </View>
 
