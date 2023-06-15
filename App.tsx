@@ -18,7 +18,7 @@ const RCalTheme = {
   },
 };
 
-const App = () => {
+function App() {
   return (
     <NavigationContainer theme={RCalTheme}>
       <Stack.Navigator>
@@ -55,6 +55,6 @@ const App = () => {
       </Stack.Navigator>
     </NavigationContainer>
   );
-};
+}
 
 export default App;
