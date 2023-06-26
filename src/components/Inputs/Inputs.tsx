@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useRef, useState} from 'react';
 import {Image, Pressable, Text, TextInput, View} from 'react-native';
-import {Images} from '../../assets/images';
+import {Images} from '../../../assets/images';
 import {colors} from '../../constants/colors';
 import {styles} from './Inputs-styles';
 

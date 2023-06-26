@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Pressable, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {commonStyles} from '../../assets/commonStyles';
+import {commonStyles} from '../../commonStyles';
 import {RCalButton} from '../../components/Buttons/Buttons';
 import {colors} from '../../constants/colors';
 import {EmailVerificationRouteProp} from '../../types/global';
