@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {commonStyles} from '../../assets/commonStyles';
+import {commonStyles} from '../../commonStyles';
 import {RCalButton} from '../../components/Buttons/Buttons';
 import {RCalTextInput} from '../../components/Inputs/Inputs';
 import {colors} from '../../constants/colors';

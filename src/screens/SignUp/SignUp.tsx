@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {Text} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {commonStyles} from '../../assets/commonStyles';
+import {commonStyles} from '../../commonStyles';
 import AuthLink from '../../components/AuthLink/AuthLink';
 import {RCalButton} from '../../components/Buttons/Buttons';
 import {PasswordInput, RCalTextInput} from '../../components/Inputs/Inputs';
