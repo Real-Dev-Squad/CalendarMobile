@@ -5,7 +5,7 @@ import {RCalButton} from '../../components/Buttons/Buttons';
 import {PasswordInput, RCalTextInput} from '../../components/Inputs/Inputs';
 import {colors} from '../../constants/colors';
 import AuthLink from '../../components/AuthLink/AuthLink';
-import {commonStyles} from '../../assets/commonStyles';
+import {commonStyles} from '../../commonStyles';
 
 function Login() {
   const [email, setEmail] = useState('');

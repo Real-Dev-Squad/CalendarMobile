@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
-import {commonStyles} from '../../assets/commonStyles';
+import {commonStyles} from '../../commonStyles';
 import {RCalButton} from '../../components/Buttons/Buttons';
 import {PasswordInput} from '../../components/Inputs/Inputs';
 import {colors} from '../../constants/colors';

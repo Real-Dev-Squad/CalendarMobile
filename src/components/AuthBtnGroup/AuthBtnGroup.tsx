@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {View} from 'react-native';
-import {Images} from '../../assets/images';
+import {Images} from '../../../assets/images';
 import {ImgButton} from '../Buttons/Buttons';
 
 function AuthBtnGroup() {
